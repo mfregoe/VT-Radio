@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  band: MyString
+  frequency: MyString
+  call_letters: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  address: MyString
+  name: MyString
+  phone: MyString
+  genre: MyString
+  streaming_url: MyString
+  longitude: MyString
+  latitude: MyString
+
+two:
+  band: MyString
+  frequency: MyString
+  call_letters: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  address: MyString
+  name: MyString
+  phone: MyString
+  genre: MyString
+  streaming_url: MyString
+  longitude: MyString
+  latitude: MyString
