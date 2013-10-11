@@ -6,8 +6,6 @@ class CreateRadioStations < ActiveRecord::Migration
       t.string :call_letters
       t.string :city
       t.string :state
-      t.string :zip
-      t.string :address
       t.string :name
       t.string :phone
       t.string :genre
