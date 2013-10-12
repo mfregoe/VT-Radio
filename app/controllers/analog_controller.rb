@@ -3,7 +3,7 @@ class AnalogController < ApplicationController
   end
 
   def bands
-    @radio_stations = RadioStation.where('streaming_url IS NULL AND band = ?', params[:band].upcase).order('name ASC, city ASC, genre ASC, band ASC')
+    @radio_stations = RadioStation.where('band = ?', params[:band].upcase).order('name ASC, city ASC, genre ASC, band ASC')
     
     respond_to do |format|
       format.html
@@ -12,7 +12,7 @@ class AnalogController < ApplicationController
   end
 
   def all_genres
-    @all_genres = (RadioStation.where('streaming_url IS NULL').map(&:genre)).uniq.sort
+    @all_genres = (RadioStation.all.map(&:genre)).uniq.sort
     
     respond_to do |format|
       format.html
@@ -21,7 +21,7 @@ class AnalogController < ApplicationController
   end
 
   def genres
-    @radio_stations = RadioStation.where('streaming_url IS NULL AND genre LIKE ?', "%#{params[:genre]}%").order('name ASC, city ASC, genre ASC, band ASC')
+    @radio_stations = RadioStation.where('genre LIKE ?', "%#{params[:genre]}%").order('name ASC, city ASC, genre ASC, band ASC')
 
     respond_to do |format|
       format.html
