@@ -4,7 +4,7 @@ class RadioStationsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @radio_stations }
+      format.json { render json: @radio_stations.to_json(:methods => :has_streaming_url) }
     end
   end
 
