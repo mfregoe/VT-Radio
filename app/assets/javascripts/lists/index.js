@@ -100,5 +100,8 @@ $(document).ready(function() {
     if(count === 0) {
       $('#data-container').html('<div style="text-align: center;">No results found within your radius</div>');
     }
+    else {
+      window.getComputedStyle($('#data-container'));
+    }
   }
 });
