@@ -1,0 +1,7 @@
+Available genres Streaming:<br/><br/>
+
+<% @all_genres.each do |genre| %>
+  <div>
+    <a href="/streaming/genres/<%= genre %>"><%= genre %></a>
+  </div>
+<% end %>

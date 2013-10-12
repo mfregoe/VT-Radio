@@ -1,0 +1,7 @@
+Available genres Analog:<br/><br/>
+
+<% @all_genres.each do |genre| %>
+  <div>
+    <a href="/analog/genres/<%= genre %>"><%= genre %></a>
+  </div>
+<% end %>

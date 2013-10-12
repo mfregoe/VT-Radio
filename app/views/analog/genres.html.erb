@@ -1,0 +1,33 @@
+<h1>Analog by Genre</h1>
+
+<table>
+  <tbody>
+    <% @radio_stations.each do |radio_station| %>
+      <tr>
+        <td><%= radio_station.id %></td>
+
+        <td><%= radio_station.band %></td>
+
+        <td><%= radio_station.frequency %></td>
+
+        <td><%= radio_station.call_letters %></td>
+
+        <td><%= radio_station.city %></td>
+
+        <td><%= radio_station.state %></td>
+
+        <td><%= radio_station.name %></td>
+
+        <td><%= radio_station.phone %></td>
+
+        <td><%= radio_station.genre %></td>
+
+        <td><%= radio_station.streaming_url %></td>
+
+        <td><%= radio_station.latitude %></td>
+
+        <td><%= radio_station.longitude %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
