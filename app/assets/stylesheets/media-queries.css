@@ -226,6 +226,43 @@
 		font-size: 4em;
 	}
 
+	#content .portfolio-expanded .post-image,
+	.single-portfolio .post-image,
+	body.list-post .post-image,
+	.shortcode.list-post .post.odd .post-image,
+	.shortcode.list-post .post.odd .post-image {
+		 width: 145px;
+		 float: none;
+		 margin: 0px auto !important;
+		 text-align: center;
+	}
+
+	#site-logo {
+		font-size: 3.5em !important;
+	}
+
+	h1 {
+		font-size: 2em !important;
+	}
+
+	a.shortcode.button.large {
+		font-size: 1.5em !important;
+	}
+	
+	.shortcode.list-post .post-image, .shortcode.list-post .post-station {
+		float: none !important;
+	}
+
+	.shortcode.list-post .post-social {
+		float: none !important;
+		text-align: center;
+	}
+
+	.sidebar-none .post .post-content {
+		text-align: center;
+		margin: 0 !important;
+	}
+
 	/*
 	TIMELINE
 	================================================ */
@@ -349,41 +386,7 @@
 		overflow: visible !important; /* prevent from hidden */
 	}
 
-	#content .portfolio-expanded .post-image,
-	.single-portfolio .post-image,
-	body.list-post .post-image,
-	.shortcode.list-post .post.odd .post-image,
-	.shortcode.list-post .post.odd .post-image {
-		 width: 145px;
-		 float: none;
-		 margin: 0px auto !important;
-		 text-align: center;
-	}
 
-	#site-logo {
-		font-size: 3.5em !important;
-	}
-
-	h1 {
-		font-size: 2em !important;
-	}
-
-	a.shortcode.button.large {
-		font-size: 1.5em !important;
-	}
-	
-	.shortcode.list-post .post-image, .shortcode.list-post .post-station {
-		float: none !important;
-	}
-
-	.shortcode.list-post .post-social {
-		float: none !important;
-	}
-
-	.sidebar-none .post .post-content {
-		text-align: center;
-		margin: 0 !important;
-	}
 	
 	/* list post */
 	.shortcode.list-post .post {
