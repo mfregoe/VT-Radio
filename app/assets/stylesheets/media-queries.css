@@ -354,16 +354,35 @@
 	body.list-post .post-image,
 	.shortcode.list-post .post.odd .post-image,
 	.shortcode.list-post .post.odd .post-image {
-		 max-width: 100%;
-		 width: 100%;
+		 width: 145px;
 		 float: none;
-		 margin-right: 0;
-		 margin-left: 0;
+		 margin: 0px auto !important;
 		 text-align: center;
 	}
+
+	#site-logo {
+		font-size: 3.5em !important;
+	}
+
+	h1 {
+		font-size: 2em !important;
+	}
+
+	a.shortcode.button.large {
+		font-size: 1.5em !important;
+	}
 	
+	.shortcode.list-post .post-image, .shortcode.list-post .post-station {
+		float: none !important;
+	}
+
+	.shortcode.list-post .post-social {
+		float: none !important;
+	}
+
 	.sidebar-none .post .post-content {
 		text-align: center;
+		margin: 0 !important;
 	}
 	
 	/* list post */
@@ -372,8 +391,6 @@
 	}
 	.shortcode.list-post .post-image {
 		float: none !important;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
 	}
 
 	/* grid2-thumb */

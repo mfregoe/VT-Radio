@@ -29,6 +29,10 @@ strong, sub, sup, tt, var, legend, fieldset, figure {
 	padding: 0;
 }
 
+html {
+	background: #000;
+}
+
 img, fieldset {
 	border: 0;
 }
@@ -75,6 +79,7 @@ body {
 	color: #888;
 	word-wrap: break-word;
 	overflow-x: hidden;
+	background: #fff;
 }
 a {
 	color: #09c;
