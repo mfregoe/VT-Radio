@@ -12,7 +12,7 @@ class StreamingController < ApplicationController
   end
 
   def all_genres
-    @all_genres = (RadioStation.where('streaming_url IS NOT NULL').map(&:genre)).uniq.sort
+    @all_genres = (RadioStation.where('streaming_url IS NOT NULL').map { |station| station.genre.split(', ') }.flatten).uniq.sort
     
     respond_to do |format|
       format.html

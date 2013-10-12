@@ -12,7 +12,7 @@ class AnalogController < ApplicationController
   end
 
   def all_genres
-    @all_genres = (RadioStation.all.map(&:genre)).uniq.sort
+    @all_genres = (RadioStation.all.map { |station| station.genre.split(', ') }.flatten).uniq.sort
     
     respond_to do |format|
       format.html
