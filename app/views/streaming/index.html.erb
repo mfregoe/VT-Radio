@@ -1,23 +1,45 @@
-<h1>Streaming</h1>
-
-<h3>PICK A FILTER BITCH!</h3>
-
-<div>
-  <%= link_to 'Filter by Genre', all_genres_streaming_index_path %>
-</div>
-
-<div>
-  OR!
-
-  <br/>
-
-  See a full list:
-</div>
-
-<div>
-  <%= link_to 'AM', '/streaming/bands/am' %>
-
-  <br/>
-
-  <%= link_to 'FM', '/streaming/bands/fm' %>
-</div>
+		<div id="body" class="clearfix">
+			<!-- layout-container -->
+			<div id="layout" class="pagewidth clearfix">
+				<!-- content -->
+				<div id="content" class="clearfix">
+					<p style="text-align: center;">
+						<big>Streaming Stations</big>
+					</p>
+					<!-- loops-wrapper -->
+					<div id="loops-wrapper" class="loops-wrapper">
+						<section id="discover-new-flat-theme" class="post-35 section type-section status-publish hentry clearfix section-post">
+						<div class="section-inner">
+							<h1 style="text-align:center;">What would you like to hear?</h1>
+							<div class="section-content clearfix">
+								<p style="text-align: center;">
+									<big>Select a genre to see only what you like.</big>
+								</p>
+								<p style="text-align: center;">
+									<%= link_to 'Filter by Genre', all_genres_streaming_index_path, class:'shortcode button large rounded green flat' %>
+								</p>
+							</div>
+							<!-- /.section-content -->
+							<h1 style="text-align:center;">Or...</h1>
+							<div class="section-content clearfix">
+								<p style="text-align: center;">
+									<big>See a full list of stations.</big>
+								</p>
+								<p style="text-align: center;">
+									<%= link_to 'AM', '/streaming/bands/am', class:'shortcode button large rounded green flat' %>
+									<%= link_to 'FM', '/streaming/bands/fm', class:'shortcode button large rounded green flat' %>
+								</p>
+							</div>
+							<!-- /.section-content -->
+						</div>
+						<!-- /.section-inner -->
+						</section>
+						<!-- /.section-post -->
+					</div>
+					<!-- /loops-wrapper -->
+				</div>
+				<!-- /content -->
+			</div>
+			<!-- /layout-container -->
+		</div>
+		<!-- /body -->

@@ -1,7 +1,33 @@
-<h1>VT RADIO</h1>
-
-<%= link_to 'Live Streaming', streaming_index_path %>
-
-<br/>
-
-<%= link_to 'Analoge Stations', analog_location_path %>
+		<div id="body" class="clearfix">
+			<!-- layout-container -->
+			<div id="layout" class="pagewidth clearfix">
+				<!-- content -->
+				<div id="content" class="clearfix">
+					<!-- loops-wrapper -->
+					<div id="loops-wrapper" class="loops-wrapper">
+						<section id="discover-new-flat-theme" class="post-35 section type-section status-publish hentry clearfix section-post">
+						<div class="section-inner">
+							<h1 style="text-align:center;">What type of radio would you like to listen to?</h1>
+							<div class="section-content clearfix">
+								<p style="text-align: center;">
+									<big>No matter your choice, it will always be local.</big>
+								</p>
+								<p style="text-align: center;">
+									<%= link_to 'Live Streaming', streaming_index_path, class:'shortcode button large rounded green flat' %>
+								</p><p style="text-align: center;">
+									<%= link_to 'Analog Stations', analog_location_path, class:'shortcode button large rounded green flat' %>
+								</p>
+							</div>
+							<!-- /.section-content -->
+						</div>
+						<!-- /.section-inner -->
+						</section>
+						<!-- /.section-post -->
+					</div>
+					<!-- /loops-wrapper -->
+				</div>
+				<!-- /content -->
+			</div>
+			<!-- /layout-container -->
+		</div>
+		<!-- /body -->
