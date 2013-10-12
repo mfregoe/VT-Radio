@@ -92,7 +92,7 @@ $(document).ready(function() {
         html += item.frequency + '</figure><div class="post-content post-station"><h1 class="post-title">';
         html += item.call_letters + ' - ' + item.name + '</h1><p class="post-meta">';
         html += item.band + ' - ' + item.city + ', ' + item.state + '</p><p>';
-        html += 'Phone: ' + item.phone + '<br/>Genres: ' + item.genre + '</p></div><div class="post-social"><p class="post-meta">Share It:</p><span class="social-link-item twitter"></span><span class="social-link-item facebook"></span></div></article>';
+        html += 'Phone: ' + item.phone + '<br/>Genres: ' + item.genre + '</p></div><div class="post-social"><p class="post-meta">Share It:</p><a href="http://twitter.com/home?status='+ document.URL + '" title="Click to share this on Twitter" target="_blank"><span class="social-link-item twitter" style="margin-right:5px"></span></a><a href="https://www.facebook.com/sharer/sharer.php?u='+ document.URL + '" target="_blank" title="Click to share this on Facebook"><span class="social-link-item facebook"></span></a><p></p></div></article>';
         $('#data-container').append(html);
       }
     });

@@ -1,17 +1,49 @@
-<h1>Let's get yo location BITCH</h1>
-
-<button id='get-user-location'>Get my location</button>
-
-<br/>
-
-Or
-
-<br/><br/>
-
-Enter zip: <input id='zip-code'> <button id='submit'>Submit</button>
-
-<br/><br/>
-<div id='your-location'></div>
-
-
-<%= link_to 'Search Radio Stations', analog_index_path %>
+		<div id="body" class="clearfix">
+			<!-- layout-container -->
+			<div id="layout" class="pagewidth clearfix">
+				<!-- content -->
+				<div id="content" class="clearfix">
+					<p style="text-align: center;">
+						<big>Analog Stations</big>
+					</p>
+					<!-- loops-wrapper -->
+					<div id="loops-wrapper" class="loops-wrapper">
+						<section id="discover-new-flat-theme" class="post-35 section type-section status-publish hentry clearfix section-post">
+						<div class="section-inner">
+							<h1 style="text-align:center;">Would you like to find stations using your location?</h1>
+							<div class="section-content clearfix">
+								<p style="text-align: center;">
+									<big>This will show you stations you are more likely to pick up.</big>
+								</p>
+								<p style="text-align: center;">
+									<a class="shortcode button large rounded green flat" id='get-user-location' href="#get-user-location">Get my location</a>
+								</p>
+							</div>
+							<!-- /.section-content -->
+							<h1 style="text-align:center;">Or...</h1>
+							<div class="section-content clearfix">
+								<p style="text-align: center;">
+									<big>Enter your local zip.</big>
+								</p>
+								<p style="text-align: center;">
+									<input id='zip-code'> <br />
+									<a class="shortcode button large rounded green flat" id='submit' href="#submit">Submit</a>
+								</p>
+								<h1 style="text-align:center;" id='your-location'></h1>
+								<p style="text-align: center;">
+									<%= link_to 'Search Radio Stations', analog_index_path, class:'shortcode button large rounded green flat' %>
+								</p>
+							</div>
+							<!-- /.section-content -->
+						</div>
+						<!-- /.section-inner -->
+						</section>
+						<!-- /.section-post -->
+					</div>
+					<!-- /loops-wrapper -->
+				</div>
+				<!-- /content -->
+			</div>
+			<!-- /layout-container -->
+		</div>
+		<!-- /body -->
