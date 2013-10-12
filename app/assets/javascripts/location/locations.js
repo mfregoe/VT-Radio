@@ -16,10 +16,11 @@ $(document).ready(function() {
       localStorage.clear();
       var zip = $('#zip-code').val();
       localStorage.setItem('zip', zip);
-      $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + zip + '&sensor=true', function(data) {
-        var address = data.results[0].formatted_address;
-        $('#your-location').html('Your location is: ' + address);
-      });
+      $('#your-location').html('Your location has been found.');
+      // $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + zip + '&sensor=true', function(data) {
+      //   var address = data.results[0].formatted_address;
+      //   $('#your-location').html('Your location is: ' + address);
+      // });
     }
   });
 
@@ -32,10 +33,11 @@ $(document).ready(function() {
     localStorage.clear();
     localStorage.setItem('latitude', latitude);
     localStorage.setItem('longitude', longitude);
-    $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ',' + longitude + '&sensor=true', function(data) {
-      var address = data.results[0].formatted_address;
-      $('#your-location').html('Your location is: ' + address);
-    });
+    $('#your-location').html('Your location has been found.');
+    // $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ',' + longitude + '&sensor=true', function(data) {
+    //   var address = data.results[0].formatted_address;
+    //   $('#your-location').html('Your location is: ' + address);
+    // });
   }
 
   function fail() {
