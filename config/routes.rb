@@ -12,6 +12,7 @@ HackVT2013Teamzeusbear::Application.routes.draw do
   end
   match '/analog/bands/:band' => 'analog#bands', via: [:get]
   match '/analog/genres/:genre' => 'analog#genres', via: [:get]
+  match '/analog/location' => 'analog#location', via: [:get]
 
   root to: 'radio_stations#index'
 end

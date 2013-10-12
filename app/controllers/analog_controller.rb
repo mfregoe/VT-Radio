@@ -28,4 +28,7 @@ class AnalogController < ApplicationController
       format.json { render json: @radio_stations.to_json(:methods => :has_streaming_url) }
     end
   end
+
+  def location
+  end
 end
