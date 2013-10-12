@@ -60,6 +60,12 @@ iframe {
 	max-width: 100%;
 }
 
+/* video */
+video {
+	height: 20px;
+	width: 150px;
+}
+
 
 /************************************************************************************
 GENERAL STYLING
@@ -1255,7 +1261,6 @@ POST
 }
 .shortcode.list-post .post-social {
 	float: right;
-	margin-right: 7%;
 	margin-top: 1%;	
 }
 .single-post .post img {

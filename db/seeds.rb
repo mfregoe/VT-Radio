@@ -52,7 +52,7 @@ RadioStation.create( band: 'FM' ,  frequency: '88.9' ,  call_letters: 'WVBA' ,  
 
 RadioStation.create( band: 'FM' ,  frequency: '89.5' ,  call_letters: 'WVPR' ,  city: 'Windsor' ,  state: 'VT' ,  name: "VPR 89.5 FM" ,  phone: '802-655-9451' ,  genre: 'VPR, NPR' ,  streaming_url: nil ,  latitude: '43.437500' ,  longitude: '-72.452222' )
 
-RadioStation.create( band: 'FM' ,  frequency: '89.9' ,  call_letters: 'WCMD' ,  city: 'Barre' ,  state: 'VT' ,  name: "89.9 Christian Ministries Radio" ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '44.125557' ,  longitude: '-72.476667' )
+RadioStation.create( band: 'FM' ,  frequency: '89.9' ,  call_letters: 'WCMD' ,  city: 'Barre' ,  state: 'VT' ,  name: "Christian Ministries Radio" ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '44.125557' ,  longitude: '-72.476667' )
 
 RadioStation.create( band: 'FM' ,  frequency: '89.9' ,  call_letters: 'WNGF' ,  city: 'Swanton' ,  state: 'VT' ,  name: "Northeast Gospel Network" ,  phone: nil ,  genre: 'Christian, Religious' ,  streaming_url: nil ,  latitude: '44.917221' ,  longitude: '-73.124167' )
 
@@ -60,7 +60,7 @@ RadioStation.create( band: 'FM' ,  frequency: '90.1' ,  call_letters: 'WOXM' ,  
 
 RadioStation.create( band: 'FM' ,  frequency: '90.1' ,  call_letters: 'WRUV' ,  city: 'Burlington' ,  state: 'VT' ,  name: "The Better Alternative" ,  phone: '802-656-4399' ,  genre: 'Alternative, Rock' ,  streaming_url: 'http://www.uvm.edu/~wruv/wruv.ram' ,  latitude: '44.480278' ,  longitude: '-73.201944' )
 
-RadioStation.create( band: 'FM' ,  frequency: '90.5' ,  call_letters: 'WCKJ' ,  city: 'St.Johnsbury' ,  state: 'VT' ,  name: "90.5 Christian Ministries Radio" ,  phone: '802-656-4399' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '44.411111' ,  longitude: '-71.970278' )
+RadioStation.create( band: 'FM' ,  frequency: '90.5' ,  call_letters: 'WCKJ' ,  city: 'St.Johnsbury' ,  state: 'VT' ,  name: "Christian Ministries Radio" ,  phone: '802-656-4399' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '44.411111' ,  longitude: '-71.970278' )
 
 RadioStation.create( band: 'FM' ,  frequency: '90.5' ,  call_letters: 'WFTF' ,  city: 'Rutland' ,  state: 'VT' ,  name: "The Wave" ,  phone: '802-773-2863' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6580/listen.pls' ,  latitude: '43.619167' ,  longitude: '-72.984444' )
 
@@ -80,7 +80,7 @@ RadioStation.create( band: 'FM' ,  frequency: '91.1' ,  call_letters: 'WVNK' ,  
 
 RadioStation.create( band: 'FM' ,  frequency: '91.3' ,  call_letters: 'WIUV' ,  city: 'Castleton' ,  state: 'VT' ,  name: "The Radio Revolution" ,  phone: '802-468-1010' ,  genre: 'Variety' ,  streaming_url: nil ,  latitude: '43.608055' ,  longitude: '-73.181667' )
 
-RadioStation.create( band: 'FM' ,  frequency: '91.5' ,  call_letters: 'WGLY' ,  city: 'Bolton' ,  state: 'VT' ,  name: "91.5 Christian Ministries Radio" ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '44.364722' ,  longitude: '-72.931111' )
+RadioStation.create( band: 'FM' ,  frequency: '91.5' ,  call_letters: 'WGLY' ,  city: 'Bolton' ,  state: 'VT' ,  name: "Christian Ministries Radio" ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '44.364722' ,  longitude: '-72.931111' )
 
 RadioStation.create( band: 'FM' ,  frequency: '91.5' ,  call_letters: 'WWLR' ,  city: 'Lyndonville' ,  state: 'VT' ,  name: "LSC Radio" ,  phone: '802-626-6214' ,  genre: 'Variety, College' ,  streaming_url: nil ,  latitude: '44.533890' ,  longitude: '-72.029167' )
 
@@ -88,11 +88,11 @@ RadioStation.create( band: 'FM' ,  frequency: '91.7' ,  call_letters: 'WGDH' ,  
 
 RadioStation.create( band: 'FM' ,  frequency: '91.7' ,  call_letters: 'WGLV' ,  city: 'Woodstock' ,  state: 'VT' ,  name: "The Light Radio" ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '43.639444' ,  longitude: '-72.836667' )
 
-RadioStation.create( band: 'FM' ,  frequency: '91.9' ,  call_letters: 'WCMK' ,  city: 'Putney' ,  state: 'VT' ,  name: 'The Light' ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: 'http://peace.str3am.com:6350/listen.pls' ,  longitude: '-72.603333' )
+RadioStation.create( band: 'FM' ,  frequency: '91.9' ,  call_letters: 'WCMK' ,  city: 'Putney' ,  state: 'VT' ,  name: 'The Light' ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '42.974445' ,  longitude: '-72.603333' )
 
 RadioStation.create( band: 'FM' ,  frequency: '92.1' ,  call_letters: 'WMOO' ,  city: 'Derby Center' ,  state: 'VT' ,  name: 'Moo 92' ,  phone: '802-766-9236' ,  genre: 'Hot Adult Contemporary' ,  streaming_url: 'http://provisioning.streamtheworld.com/pls/wmoofmaac.pls' ,  latitude: '44.973057' ,  longitude: '-72.075000' )
 
-RadioStation.create( band: 'FM' ,  frequency: '92.1' ,  call_letters: 'WVTK' ,  city: 'Port Henry' ,  state: 'NY' ,  name: 'WVTK-FM 92.1' ,  phone: '802-388-7563' ,  genre: 'Adult Contemporary' ,  streaming_url: 'http://nick9.surfernetwork.com/wvtk' ,  latitude: '44.027222-73.481667' ,  longitude: '-73.481667' )
+RadioStation.create( band: 'FM' ,  frequency: '92.1' ,  call_letters: 'WVTK' ,  city: 'Port Henry' ,  state: 'NY' ,  name: 'WVTK-FM 92.1' ,  phone: '802-388-7563' ,  genre: 'Adult Contemporary' ,  streaming_url: 'http://nick9.surfernetwork.com/wvtk' ,  latitude: '44.027222' ,  longitude: '-73.481667' )
 
 RadioStation.create( band: 'FM' ,  frequency: '92.7' ,  call_letters: 'WKVT' ,  city: 'Brattleboro' ,  state: 'VT' ,  name: 'Classic Hits 92.7' ,  phone: '802-254-2343' ,  genre: 'Classic Rock, Classic Hits' ,  streaming_url: nil ,  latitude: '42.895832' ,  longitude: '-72.663611' )
 
@@ -122,7 +122,7 @@ RadioStation.create( band: 'FM' ,  frequency: '95.3' ,  call_letters: 'WXLF' ,  
 RadioStation.create( band: 'FM' ,  frequency: '95.5' ,  call_letters: 'WXXX' ,  city: 'South Burlington' ,  state: 'VT' ,  name: 'Todays Hitmusic 95TRIPLEX' ,  phone: '802-655-9550' ,  genre: 'Contemporary Hits, Top 40' ,  streaming_url: nil ,  latitude: '44.509444' ,  longitude: '-73.183056' )
 
 
-RadioStation.create( band: 'FM' ,  frequency: '95.7' ,  call_letters: 'WDOT' ,  city: 'Danville' ,  state: 'VT' ,  name: 'The Point' ,  phone: '802-223-2396' ,  genre: 'Adult Alternative' ,  streaming_url: 'http://nebcastwest.dyndns.org:1047/listen.pls' ,  latitude: '44.416111' ,  longitude: '-72.058889' )
+RadioStation.create( band: 'FM' ,  frequency: '95.7' ,  call_letters: 'WDOT' ,  city: 'Danville' ,  state: 'VT' ,  name: 'The Point' ,  phone: '802-223-2396' ,  genre: 'Adult Alternative' ,  streaming_url: 'http://nebcastwest.dyndns.org:1047/' ,  latitude: '44.416111' ,  longitude: '-72.058889' )
 
 RadioStation.create( band: 'FM' ,  frequency: '96.1' ,  call_letters: 'WDEV' ,  city: 'Warren' ,  state: 'VT' ,  name: 'Radio Vermont' ,  phone: '802-244-7321' ,  genre: 'News, Talk, Variety' ,  streaming_url: 'http://www.stretchinternet.com/wdev/wdev.m3u' ,  latitude: '44.126944' ,  longitude: '-72.928612' )
 
@@ -176,10 +176,10 @@ RadioStation.create( band: 'FM' ,  frequency: '102.3' ,  call_letters: 'WIXM' , 
 RadioStation.create( band: 'FM' ,  frequency: '102.7' ,  call_letters: 'WEQX' ,  city: 'Manchester' ,  state: 'VT' ,  name: 'The Alternative' ,  phone: '802-362-4800' ,  genre: 'Alternative' ,  streaming_url: 'http://crystalout.surfernetwork.com:8001/WEQX_MP3.m3u' ,  latitude: '43.166111' ,  longitude: '-73.116389' )
 
 
-RadioStation.create( band: 'FM' ,  frequency: '102.9' ,  call_letters: 'WCLX' ,  city: 'Westport' ,  state: 'NY' ,  name: 'Farm Fresh Radio' ,  phone: '758-5000' ,  genre: 'Adult Alternative, Blues, Folk' ,  streaming_url: 'http://sc2.spacialnet.com:28672/listen.pls' ,  latitude: '44.220556' ,  longitude: '-73.409721' )
+RadioStation.create( band: 'FM' ,  frequency: '102.9' ,  call_letters: 'WCLX' ,  city: 'Westport' ,  state: 'NY' ,  name: 'Farm Fresh Radio' ,  phone: '802-758-5000' ,  genre: 'Adult Alternative, Blues, Folk' ,  streaming_url: 'http://sc2.spacialnet.com:28672/listen.pls' ,  latitude: '44.220556' ,  longitude: '-73.409721' )
 
 
-RadioStation.create( band: 'FM' ,  frequency: '103.1' ,  call_letters: 'WRJT' ,  city: 'Royalton' ,  state: 'VT' ,  name: 'The Point' ,  phone: '802-223-2396' ,  genre: 'Adult Alternative' ,  streaming_url: 'http://nebcastwest.dyndns.org:1047/listen.pls' ,  latitude: '43.774445' ,  longitude: '-72.398611' )
+RadioStation.create( band: 'FM' ,  frequency: '103.1' ,  call_letters: 'WRJT' ,  city: 'Royalton' ,  state: 'VT' ,  name: 'The Point' ,  phone: '802-223-2396' ,  genre: 'Adult Alternative' ,  streaming_url: 'http://nebcastwest.dyndns.org:1047/' ,  latitude: '43.774445' ,  longitude: '-72.398611' )
 
 RadioStation.create( band: 'FM' ,  frequency: '103.3' ,  call_letters: 'WWMP' ,  city: 'Waterbury' ,  state: 'VT' ,  name: 'MP103' ,  phone: '802-863-1010' ,  genre: 'Adult Alternative' ,  streaming_url: 'http://nebcastwest.dyndns.org:1012/WWMPMP3.m3u' ,  latitude: '44.364445' ,  longitude: '-72.931389' )
 
@@ -188,7 +188,7 @@ RadioStation.create( band: 'FM' ,  frequency: '104.1' ,  call_letters: 'WMNV' , 
 
 RadioStation.create( band: 'FM' ,  frequency: '104.3' ,  call_letters: 'WMVY' ,  city: 'Hartford' ,  state: 'VT' ,  name: 'MVY Radio' ,  phone: '603-298-0332' ,  genre: 'Oldies, Adult Alternative' ,  streaming_url: 'http://www.mvyradio.com/listen.php?file=pls' ,  latitude: '43.654167' ,  longitude: '-72.358889' )
 
-RadioStation.create( band: 'FM' ,  frequency: '104.7' ,  call_letters: 'WNCS' ,  city: 'Montpelier' ,  state: 'VT' ,  name: '104.7 The Point' ,  phone: '802-223-2396' ,  genre: 'Adult Alternative' ,  streaming_url: 'http://nebcastwest.dyndns.org/WNCSFM' ,  latitude: '44.420555' ,  longitude: '-72.828333' )
+RadioStation.create( band: 'FM' ,  frequency: '104.7' ,  call_letters: 'WNCS' ,  city: 'Montpelier' ,  state: 'VT' ,  name: 'The Point' ,  phone: '802-223-2396' ,  genre: 'Adult Alternative' ,  streaming_url: 'http://nebcastwest.dyndns.org:1047/' ,  latitude: '44.420555' ,  longitude: '-72.828333' )
 
 RadioStation.create( band: 'FM' ,  frequency: '105.1' ,  call_letters: 'WKOL' ,  city: 'Plattsburgh' ,  state: 'NY' ,  name: 'Kool 105' ,  phone: '658-1230' ,  genre: 'Oldies, Classic Hits' ,  streaming_url: 'http://stream.liquidcompass.net/WKOLFMAAC.pls' ,  latitude: '44.525278' ,  longitude: '-73.518611' )
 
@@ -209,27 +209,3 @@ RadioStation.create( band: 'FM' ,  frequency: '107.1' ,  call_letters: 'WZLF' , 
 
 
 RadioStation.create( band: 'FM' ,  frequency: '107.9' ,  call_letters: 'WVPS' ,  city: 'Burlingon' ,  state: 'VT' ,  name: 'VPR 107.9 FM' ,  phone: '802-655-9451' ,  genre: 'VPR, NPR' ,  streaming_url: 'http://www.vpr.net/vpr_files/stream_playlists/vprhigh.pls' ,  latitude: '44.525556' ,  longitude: '-72.816111' )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
