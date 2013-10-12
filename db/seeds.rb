@@ -88,11 +88,11 @@ RadioStation.create( band: 'FM' ,  frequency: '91.7' ,  call_letters: 'WGDH' ,  
 
 RadioStation.create( band: 'FM' ,  frequency: '91.7' ,  call_letters: 'WGLV' ,  city: 'Woodstock' ,  state: 'VT' ,  name: "The Light Radio" ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '43.639444' ,  longitude: '-72.836667' )
 
-RadioStation.create( band: 'FM' ,  frequency: '91.9' ,  call_letters: 'WCMK' ,  city: 'Putney' ,  state: 'VT' ,  name: 'The Light' ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: 'http://peace.str3am.com:6350/listen.pls' ,  longitude: '-72.603333' )
+RadioStation.create( band: 'FM' ,  frequency: '91.9' ,  call_letters: 'WCMK' ,  city: 'Putney' ,  state: 'VT' ,  name: 'The Light' ,  phone: '802-878-8885' ,  genre: 'Christian, Religious' ,  streaming_url: 'http://peace.str3am.com:6350/listen.pls' ,  latitude: '42.974445' ,  longitude: '-72.603333' )
 
 RadioStation.create( band: 'FM' ,  frequency: '92.1' ,  call_letters: 'WMOO' ,  city: 'Derby Center' ,  state: 'VT' ,  name: 'Moo 92' ,  phone: '802-766-9236' ,  genre: 'Hot Adult Contemporary' ,  streaming_url: 'http://provisioning.streamtheworld.com/pls/wmoofmaac.pls' ,  latitude: '44.973057' ,  longitude: '-72.075000' )
 
-RadioStation.create( band: 'FM' ,  frequency: '92.1' ,  call_letters: 'WVTK' ,  city: 'Port Henry' ,  state: 'NY' ,  name: 'WVTK-FM 92.1' ,  phone: '802-388-7563' ,  genre: 'Adult Contemporary' ,  streaming_url: 'http://nick9.surfernetwork.com/wvtk' ,  latitude: '44.027222-73.481667' ,  longitude: '-73.481667' )
+RadioStation.create( band: 'FM' ,  frequency: '92.1' ,  call_letters: 'WVTK' ,  city: 'Port Henry' ,  state: 'NY' ,  name: 'WVTK-FM 92.1' ,  phone: '802-388-7563' ,  genre: 'Adult Contemporary' ,  streaming_url: 'http://nick9.surfernetwork.com/wvtk' ,  latitude: '44.027222' ,  longitude: '-73.481667' )
 
 RadioStation.create( band: 'FM' ,  frequency: '92.7' ,  call_letters: 'WKVT' ,  city: 'Brattleboro' ,  state: 'VT' ,  name: 'Classic Hits 92.7' ,  phone: '802-254-2343' ,  genre: 'Classic Rock, Classic Hits' ,  streaming_url: nil ,  latitude: '42.895832' ,  longitude: '-72.663611' )
 
