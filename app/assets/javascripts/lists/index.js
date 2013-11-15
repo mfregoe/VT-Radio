@@ -12,20 +12,20 @@ $(document).ready(function() {
       }
       else {
         collection = data;
-        console.log(collection.length);
+        
         //Distance Matrix can only handle 25 destinations per request
         if(collection.length >= 75) {
+          getDestinations(collection);
+          getDestinationsPassTwo(collection);
+          getDestinationsPassThree(collection);
           getDestinationsPassFour(collection);
-          getDestinationsPassThree(collection);
-          getDestinationsPassTwo(collection);
-          getDestinations(collection);
         } else if(collection.length >= 50) {
+          getDestinations(collection);
+          getDestinationsPassTwo(collection);
           getDestinationsPassThree(collection);
-          getDestinationsPassTwo(collection);
-          getDestinations(collection);
         } else if(collection.length >= 25) {
-          getDestinationsPassTwo(collection);
           getDestinations(collection);
+          getDestinationsPassTwo(collection);
         } else {
           getDestinations(collection);
         }
@@ -318,12 +318,7 @@ $(document).ready(function() {
         $('#data-container').append(html);
       }
     });
-
-    if(count === 0) {
-      $('#data-container').html('<div style="text-align: center;">No results found within your radius</div>');
-    }
-    else {
-      window.getComputedStyle($('#data-container'));
-    }
+  
+    window.getComputedStyle($('#data-container'));
   }
 });
