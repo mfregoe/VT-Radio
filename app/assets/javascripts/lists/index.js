@@ -64,7 +64,7 @@ $(document).ready(function() {
       var latlng = new google.maps.LatLng(item.latitude,item.longitude);
       return latlng;
     })).join('|');
-    checkDistancePassThree(destinations);
+    checkDistancePassFour(destinations);
   }
 
   // function to make google map matrix call
