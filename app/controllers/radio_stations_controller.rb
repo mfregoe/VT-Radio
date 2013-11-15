@@ -2,25 +2,23 @@ class RadioStationsController < ApplicationController
   def index
   end
 
-  def streaming
-    where_clause = 'streaming_url IS NOT NULL'
+  def listing
     where_clause += radio_station_filters
     @radio_stations = RadioStation.where(where_clause).order('name ASC, city ASC, genre ASC, band ASC')
 
     respond_to do |format|
       format.html
-      format.json { render json: @radio_stations.to_json(:methods => :has_streaming_url) }
+      format.json { render json: @radio_stations }
     end
   end
 
-  def analog
-    where_clause = 'streaming_url IS NULL'
+  def find
     where_clause += radio_station_filters
     @radio_stations = RadioStation.where(where_clause).order('name ASC, city ASC, genre ASC, band ASC')
 
     respond_to do |format|
       format.html
-      format.json { render json: @radio_stations.to_json(:methods => :has_streaming_url) }
+      format.json { render json: @radio_stations }
     end
   end
 

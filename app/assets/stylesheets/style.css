@@ -2404,3 +2404,7 @@ BUILDER
 .mobile-body #headerwrap > * {
 	-webkit-transform: translate3d(0,0,0);
 }
+
+#location-next-step {
+	display: none;
+}

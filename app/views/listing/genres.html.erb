@@ -4,7 +4,7 @@
         <!-- content -->
         <div id="content" class="clearfix">
           <p style="text-align: center;">
-            <big>Streaming Stations: Listings</big>
+            <big>Station Listings By Genre</big>
           </p>
           <!-- loops-wrapper -->
           <div id="loops-wrapper" class="loops-wrapper">
@@ -34,11 +34,6 @@
                       <p class="post-meta">Share It:</p>
                       <a href="http://twitter.com/home?status=<%= radio_station.call_letters %> - <%= radio_station.name %>" title="Click to share this on Twitter" target="_blank"><span class="social-link-item twitter"></span></a>
                       <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/<%= request.fullpath %>" target="_blank" title="Click to share this on Facebook"><span class="social-link-item facebook"></span></a>
-                      <p></p>
-                      <p class="post-meta">Stream It:</p>
-                      <video controls name="media">
-                        <source src="<%= radio_station.streaming_url %>" type="audio/mpeg">
-                      </video>
                     </div>
                     <!-- /.post-content -->
                     </article>

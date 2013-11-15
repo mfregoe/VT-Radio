@@ -1,47 +1,65 @@
 $(document).ready(function() {
+  var geocoder;
+
   $('#get-user-location').click(function() {
     if(navigator.geolocation) {
      navigator.geolocation.getCurrentPosition( success, fail );
     }
     else {
-      alert("Sorry, your browser does not support geolocation services.");
+      $('#your-location').html('Sorry, your browser does not support geolocation services.');
     }
   });
 
+  // Get user location (zip)
+
   $('#submit').click(function() {
     if($('#zip-code').val().length === 0 || $('#zip-code').val().match(/[a-z]/gi) || $('#zip-code').val().match(/\s/gi) || $('#zip-code').val().length < 5) {
-      alert('Invalid Zip Code.');
+      $('#your-location').html('Invalid Zip Code.');
     }
     else {
       localStorage.clear();
       var zip = $('#zip-code').val();
       localStorage.setItem('zip', zip);
-      $('#your-location').html('Your location has been found.');
-      // $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + zip + '&sensor=true', function(data) {
-      //   var address = data.results[0].formatted_address;
-      //   $('#your-location').html('Your location is: ' + address);
-      // });
+      geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode( { 'address': zip}, function(data, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          var address = data[0].formatted_address;
+          $('#your-location').html('Your location is: ' + address);
+          $('#location-next-step').show();
+        } else {
+          $('#your-location').html('Sorry, we couldn\'t process your address, please try again.');
+        }
+      });
     }
   });
 
-  // Get user locations (lat/long)
+  // Get user location (lat/long)
 
-  //http://groups.google.com/group/google-maps-js-api-v3/browse_thread/thread/0c28ecbdb92e9e23
   function success(position) {
+    geocoder = new google.maps.Geocoder();
+
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
     localStorage.clear();
     localStorage.setItem('latitude', latitude);
     localStorage.setItem('longitude', longitude);
-    $('#your-location').html('Your location has been found.');
-    // $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + latitude + ',' + longitude + '&sensor=true', function(data) {
-    //   var address = data.results[0].formatted_address;
-    //   $('#your-location').html('Your location is: ' + address);
-    // });
+
+    var latlng = new google.maps.LatLng(latitude,longitude);
+
+    geocoder.geocode( { 'location': latlng}, function(data, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        var address = data[0].formatted_address;
+        $('#your-location').html('Your location is: ' + address);
+        $('#location-next-step').show();
+      } else {
+        $('#your-location').html('Sorry, we couldn\'t process your address, please try again.');
+      }
+    });
   }
 
   function fail() {
     // Could not obtain location
-    alert('Failed to retreive your location.');
+    $('#your-location').html('Failed to retreive your location.');
   }
 });

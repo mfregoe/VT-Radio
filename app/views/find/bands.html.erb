@@ -4,7 +4,13 @@
         <!-- content -->
         <div id="content" class="clearfix">
           <p style="text-align: center;">
-            <big>Analog Stations: Listings</big>
+            <big>Stations In Your Area:
+              <% if !request.fullpath.include?('fm') %>
+                AM 
+              <% elsif request.fullpath.include?('fm') %>
+                FM 
+              <% end %>
+            </big>
           </p>
           <!-- loops-wrapper -->
           <div id="loops-wrapper" class="loops-wrapper">

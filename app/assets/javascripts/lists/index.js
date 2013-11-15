@@ -12,7 +12,23 @@ $(document).ready(function() {
       }
       else {
         collection = data;
-        getDestinations(collection);
+        console.log(collection.length);
+        //Distance Matrix can only handle 25 destinations per request
+        if(collection.length >= 75) {
+          getDestinationsPassFour(collection);
+          getDestinationsPassThree(collection);
+          getDestinationsPassTwo(collection);
+          getDestinations(collection);
+        } else if(collection.length >= 50) {
+          getDestinationsPassThree(collection);
+          getDestinationsPassTwo(collection);
+          getDestinations(collection);
+        } else if(collection.length >= 25) {
+          getDestinationsPassTwo(collection);
+          getDestinations(collection);
+        } else {
+          getDestinations(collection);
+        }
       }
     });
   }
@@ -20,26 +36,231 @@ $(document).ready(function() {
   // loop through collection, get all lat/long values from
   // collection
   function getDestinations(collection) {
-    var destinations = (_.map(collection, function(item) { return item.latitude + ',' + item.longitude; })).join('|');
+    var destinations = (_.map(collection, function(item) {
+      var latlng = new google.maps.LatLng(item.latitude,item.longitude);
+      return latlng;
+    })).join('|');
     checkDistance(destinations);
+  }
+
+  function getDestinationsPassTwo(collection) {
+    var destinations = (_.map(collection, function(item) {
+      var latlng = new google.maps.LatLng(item.latitude,item.longitude);
+      return latlng;
+    })).join('|');
+    checkDistancePassTwo(destinations);
+  }
+
+  function getDestinationsPassThree(collection) {
+    var destinations = (_.map(collection, function(item) {
+      var latlng = new google.maps.LatLng(item.latitude,item.longitude);
+      return latlng;
+    })).join('|');
+    checkDistancePassThree(destinations);
+  }
+
+  function getDestinationsPassFour(collection) {
+    var destinations = (_.map(collection, function(item) {
+      var latlng = new google.maps.LatLng(item.latitude,item.longitude);
+      return latlng;
+    })).join('|');
+    checkDistancePassThree(destinations);
   }
 
   // function to make google map matrix call
   function checkDistance(destinations) {
     var origin = null;
-
+    var service = new google.maps.DistanceMatrixService();
     if(localStorage.getItem('latitude') !== null && localStorage.getItem('longitude') !== null) {
-      origin = localStorage.getItem('latitude') + ',' + localStorage.getItem('longitude');
-      // google api call
-      $.getJSON('http://maps.googleapis.com/maps/api/distancematrix/json?origins=' + origin + '&destinations=' + destinations + '&mode=driving&sensor=false', function(data) {
-        convertMetersToMiles(data.rows[0].elements);
+      var latlngorig = new google.maps.LatLng(localStorage.getItem('latitude'),localStorage.getItem('longitude')).toString();
+      var latlngarr = new Array();
+      latlngarr = destinations.split('|');
+      latlngdest = latlngarr.slice(0,25);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
       });
     }
     else if(localStorage.getItem('zip') !== null) {
-      origin = localStorage.getItem('zip');
-      // google api call
-      $.getJSON('http://maps.googleapis.com/maps/api/distancematrix/json?origins=' + origin + '&destinations=' + destinations + '&mode=driving&sensor=false', function(data) {
-        convertMetersToMiles(data.rows[0].elements);
+      var latlngorig = localStorage.getItem('zip');
+      var latlngdest = new Array();
+      latlngdest = destinations.split('|');
+      latlngdest = latlngdest.slice(0,25);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
+      });
+    }
+    else {
+      renderCollection();
+    }
+  }
+
+  function checkDistancePassTwo(destinations) {
+    var origin = null;
+    var service = new google.maps.DistanceMatrixService();
+    if(localStorage.getItem('latitude') !== null && localStorage.getItem('longitude') !== null) {
+      var latlngorig = new google.maps.LatLng(localStorage.getItem('latitude'),localStorage.getItem('longitude')).toString();
+      var latlngdest = new Array();
+      latlngdest = destinations.split('|');
+      latlngdest = latlngdest.slice(26,50);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
+      });
+    }
+    else if(localStorage.getItem('zip') !== null) {
+      var latlngorig = localStorage.getItem('zip');
+      var latlngdest = new Array();
+      latlngdest = destinations.split('|');
+      latlngdest = latlngdest.slice(26,50);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
+      });
+    }
+    else {
+      renderCollection();
+    }
+  }
+
+  function checkDistancePassThree(destinations) {
+    var origin = null;
+    var service = new google.maps.DistanceMatrixService();
+    if(localStorage.getItem('latitude') !== null && localStorage.getItem('longitude') !== null) {
+      var latlngorig = new google.maps.LatLng(localStorage.getItem('latitude'),localStorage.getItem('longitude')).toString();
+      var latlngdest = new Array();
+      latlngdest = destinations.split('|');
+      latlngdest = latlngdest.slice(51,75);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
+      });
+    }
+    else if(localStorage.getItem('zip') !== null) {
+      var latlngorig = localStorage.getItem('zip');
+      var latlngdest = new Array();
+      latlngdest = destinations.split('|');
+      latlngdest = latlngdest.slice(51,75);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
+      });
+    }
+    else {
+      renderCollection();
+    }
+  }
+
+  function checkDistancePassFour(destinations) {
+    var origin = null;
+    var service = new google.maps.DistanceMatrixService();
+    if(localStorage.getItem('latitude') !== null && localStorage.getItem('longitude') !== null) {
+      var latlngorig = new google.maps.LatLng(localStorage.getItem('latitude'),localStorage.getItem('longitude')).toString();
+      var latlngdest = new Array();
+      latlngdest = destinations.split('|');
+      latlngdest = latlngdest.slice(76,100);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
+      });
+    }
+    else if(localStorage.getItem('zip') !== null) {
+      var latlngorig = localStorage.getItem('zip');
+      var latlngdest = new Array();
+      latlngdest = destinations.split('|');
+      latlngdest = latlngdest.slice(76,100);
+
+      service.getDistanceMatrix({
+        origins: [latlngorig],
+        destinations: latlngdest,
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        avoidHighways: false,
+        avoidTolls: false
+      }, function(data, status) {
+        if (status == google.maps.DistanceMatrixStatus.OK) {
+          convertMetersToMiles(data.rows[0].elements);
+        } else {
+          $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
+        }
       });
     }
     else {
@@ -60,6 +281,7 @@ $(document).ready(function() {
   // FM max range = 35 miles
   function filterCollection(distance, itemIndex) {
     var band = collection[itemIndex].band;
+    var name = collection[itemIndex].call_letters;
     if(band === 'AM') {
       if(distance <= 60) {
         collection[itemIndex].distance = distance;
@@ -86,7 +308,7 @@ $(document).ready(function() {
   function renderCollection() {
     var count = 0;
     _.each(collection, function(item) {
-      if(item.show || item.show === undefined) {
+      if(item.show) {
         count++;
         var html = '<article class="post-2178 post type-post status-publish format-standard hentry category-blog post clearfix"><figure class="post-image">';
         html += item.frequency + '</figure><div class="post-content post-station"><h1 class="post-title">';

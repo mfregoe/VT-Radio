@@ -1,4 +1,4 @@
-class AnalogController < ApplicationController
+class ListingController < ApplicationController
   def index
   end
 
@@ -7,7 +7,7 @@ class AnalogController < ApplicationController
     
     respond_to do |format|
       format.html
-      format.json { render json: @radio_stations.to_json(:methods => :has_streaming_url) }
+      format.json { render json: @radio_stations }
     end
   end
 
@@ -25,10 +25,7 @@ class AnalogController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @radio_stations.to_json(:methods => :has_streaming_url) }
+      format.json { render json: @radio_stations }
     end
-  end
-
-  def location
   end
 end
