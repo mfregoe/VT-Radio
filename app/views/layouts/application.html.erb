@@ -8,44 +8,36 @@
   	<%= csrf_meta_tags %>
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 </head>
-<body class="page page-id-9 page-parent page-template-default skin-default webkit query-page query-section sidebar-none list-post">
-	<div id="pagewrap">
-		<div id="headerwrap">
-			<header id="header" class="section-inner">
-			<hgroup>
+<body class="sidebar-none">
+	<div id="headerwrap">
+		<header id="header">
 			<h1 id="site-logo"><a href="/" title="VT Radio">VT Radio</a></h1>
 			<h2 id="site-description">Vermont's Open Radio Directory.</h2>
-			</hgroup>
-			</header>
-			<!-- /#header -->
-		</div>
-		<!-- /#headerwrap -->
+		</header>
+		<!-- /#header -->
+	</div>
+	<!-- /#headerwrap -->
 
-		<%= yield %>
+	<%= yield %>
 
-		<div id="footerwrap">
-			<footer id="footer" class="pagewidth clearfix">
-			
+	<div id="footerwrap">
+		<footer id="footer" class="pagewidth clearfix">
 			<p class="back-top">
-				<a href="#header">
-				<img src="http://themify.me/demo/themes/flat/wp-content/themes/flat/images/back-top.png" alt="Back to Top">
-				</a>
+				<a href="#header"><span class="back-top-arrow"></span></a>
 			</p>
 			<div class="footer-text clearfix">
-				<div class="one post-title">
+				<div class="post-title">
 					&copy; 2013 VT Radio
 				</div>
-				<div class="two post-date">
+				<div class="post-date">
 					Powered by <a href="http://www.vab.org">The Vermont Assocition of Broadcasters</a>
 				</div>
 			</div>
 			<!-- /footer-text -->
-			</footer>
-			<!-- /#footer -->
-		</div>
-		<!-- /#footerwrap -->
+		</footer>
+		<!-- /#footer -->
 	</div>
-	<!-- /#pagewrap -->
+	<!-- /#footerwrap -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbycvccNMbjA95mFgB-yovb0Xg3m-pEP4&sensor=false"></script>
 	<%= javascript_include_tag "application" %>
 </body>
