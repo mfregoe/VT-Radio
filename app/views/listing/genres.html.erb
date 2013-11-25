@@ -1,61 +1,31 @@
-    <div id="body" class="clearfix">
-      <!-- layout-container -->
-      <div id="layout" class="pagewidth clearfix">
-        <!-- content -->
-        <div id="content" class="clearfix">
-          <p style="text-align: center;">
-            <big>Station Listings By Genre</big>
-          </p>
-          <!-- loops-wrapper -->
-          <div id="loops-wrapper" class="loops-wrapper">
-            <section id="discover-new-flat-theme" class="post-35 section type-section status-publish hentry clearfix section-post">
-            <div class="section-inner">
-              <div class="section-content clearfix">
-                  <!-- shortcode list_posts -->
-                  <div class="loops-wrapper shortcode clearfix list-posts layout list-post circle-image ">
-                  <% @radio_stations.each do |radio_station| %>
-                    <article id="post-2178" class="post-2178 post type-post status-publish format-standard hentry category-blog post clearfix">
-                    <figure class="post-image">
-                      <%= radio_station.frequency %>
-                    </figure>
-                    <div class="post-content post-station">
-                      <h1 class="post-title">
-                        <%= radio_station.call_letters %> - <%= radio_station.name %>
-                      </h1>
-                      <p class="post-meta">
-                        <%= radio_station.band %> - <%= radio_station.city %>, <%= radio_station.state %>
-                      </p>
-                      <p>
-                        Phone: <%= radio_station.phone %><br />
-                        Genres: <%= radio_station.genre %>
-                      </p>
-                    </div>
-                    <div class="post-social">
-                      <p class="post-meta">Share It:</p>
-                      <a href="http://twitter.com/home?status=<%= radio_station.call_letters %> - <%= radio_station.name %>" title="Click to share this on Twitter" target="_blank"><span class="social-link-item twitter"></span></a>
-                      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/<%= request.fullpath %>" target="_blank" title="Click to share this on Facebook"><span class="social-link-item facebook"></span></a>
-                    </div>
-                    <!-- /.post-content -->
-                    </article>
-                    <!-- /.post -->
-                  <% end %>
-                  </div>
-                  <!-- /shortcode list_posts -->
-                  <div id="themify_builder_content-17" data-postid="17" class="themify_builder_content themify_builder themify_builder_front">
-                  </div>
-                  <!-- /themify_builder_content -->
-                </div>
-                <!-- /.section-content -->
-            </div>
-            <!-- /.section-inner -->
-            </section>
-            <!-- /.section-post -->
-          </div>
-          <!-- /loops-wrapper -->
-        </div>
-        <!-- /content -->
+<div class="section-inner">
+  <div class="shortcode clearfix list-post circle-image">
+  <% @radio_stations.each do |radio_station| %>
+    <div class="post clearfix">
+      <div class="post-image">
+        <%= radio_station.frequency %>
       </div>
-      <!-- /layout-container -->
+      <div class="post-station">
+        <h1 class="post-title">
+          <%= radio_station.call_letters %> - <%= radio_station.name %>
+        </h1>
+        <p class="post-meta">
+          <%= radio_station.band %> - <%= radio_station.city %>, <%= radio_station.state %>
+        </p>
+        <p>
+          Phone: <%= radio_station.phone %><br />
+          Genres: <%= radio_station.genre %>
+        </p>
+      </div>
+      <div class="post-social">
+        <p class="post-meta">Share It:</p>
+        <a href="http://twitter.com/home?status=<%= radio_station.call_letters %> - <%= radio_station.name %>" title="Click to share this on Twitter" target="_blank"><span class="social-link-item twitter"></span></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/<%= request.fullpath %>" target="_blank" title="Click to share this on Facebook"><span class="social-link-item facebook"></span></a>
+      </div>
     </div>
-    <!-- /body -->
+  <% end %>
+  </div>
+  <!-- /shortcode list_posts -->
+</div>
+<!-- /.section-inner -->
 

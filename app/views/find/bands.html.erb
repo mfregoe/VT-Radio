@@ -1,41 +1,17 @@
-    <div id="body" class="clearfix">
-      <!-- layout-container -->
-      <div id="layout" class="pagewidth clearfix">
-        <!-- content -->
-        <div id="content" class="clearfix">
-          <p style="text-align: center;">
-            <big>Stations In Your Area:
-              <% if !request.fullpath.include?('fm') %>
-                AM 
-              <% elsif request.fullpath.include?('fm') %>
-                FM 
-              <% end %>
-            </big>
-          </p>
-          <!-- loops-wrapper -->
-          <div id="loops-wrapper" class="loops-wrapper">
-            <section id="discover-new-flat-theme" class="post-35 section type-section status-publish hentry clearfix section-post">
-            <div class="section-inner">
-              <div class="section-content clearfix">
-                  <!-- shortcode list_posts -->
-                  <div id='data-container' class="loops-wrapper shortcode clearfix list-posts layout list-post circle-image ">
-                  </div>
-                  <!-- /shortcode list_posts -->
-                  <div id="themify_builder_content-17" data-postid="17" class="themify_builder_content themify_builder themify_builder_front">
-                  </div>
-                  <!-- /themify_builder_content -->
-                </div>
-                <!-- /.section-content -->
-            </div>
-            <!-- /.section-inner -->
-            </section>
-            <!-- /.section-post -->
-          </div>
-          <!-- /loops-wrapper -->
-        </div>
-        <!-- /content -->
-      </div>
-      <!-- /layout-container -->
-    </div>
-    <!-- /body -->
+<div class="section-outer">
+  <h4 class="textcenter">
+    Stations In Your Area:
+    <% if !request.fullpath.include?('fm') %>
+      AM
+    <% elsif request.fullpath.include?('fm') %>
+      FM
+    <% end %>
+  </h4>
+</div>
+<!-- /.section-outer -->
 
+<div class="section-inner">
+      <div id="data-container" class="shortcode clearfix list-post circle-image"></div>
+      <!-- /.shortcode list_posts -->
+</div>
+<!-- /.section-inner -->

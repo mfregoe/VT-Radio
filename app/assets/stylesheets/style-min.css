@@ -87,6 +87,47 @@ h6 {
 	font-size: 1.2em;
 }
 
+/* FORM
+================================================ */
+/* form input */
+input, textarea, select, input[type=search], button {
+	font-size: 120%;
+	font-family: 'Josefin Sans', sans-serif;
+}
+input[type=text], input[type=password], textarea, input[type=search], input[type=email] {
+	background: #eee;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-appearance: none;
+}
+input[type=text], input[type=search], input[type=email] {
+	width: 240px;
+	max-width: 90%;
+}
+
+/* form button */
+input[type=reset], input[type=submit], button {
+	background: #f06544;
+	color: #fff;
+	border: none;
+	padding: 7px 20px;
+	cursor: pointer;
+	border-radius: 10px;
+	text-transform: uppercase;
+	-webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+/* form input:hover */
+input[type=reset]:hover, input[type=submit]:hover, button:hover {
+	background: #FF7F5E;
+	color: #fff;
+}
+
 /************************************************************************************
 STRUCTURE
 *************************************************************************************/
@@ -101,6 +142,24 @@ STRUCTURE
 .section-inner {
 	padding-top: 2%;
 	padding-bottom: 8%;
+}
+
+.sidebar-none.list-post .section-inner {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#zip-code {
+	margin-bottom: 10px;
+}
+
+#location-next-step {
+	display: none;
+}
+
+.circle-image img {
+	border-radius: 100%;
 }
 
 /************************************************************************************
@@ -273,6 +332,79 @@ POST
 	margin: 0 0 15px;
 }
 
+/* post image */
+.post-image {
+	width: 145px;
+	height: 145px;
+	border-radius: 73px;
+	line-height: 150px;
+	text-align: center;
+	background: #000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2.5em;
+	color: #999;
+
+}
+.post-image img{
+	border-radius: 10px;
+}
+.post-image.left {
+	float: left;
+	margin-right: 3.2%;
+}
+.post-image.right {
+	float: right;
+	margin-left: 3.2%;
+}
+
+/* post meta */
+.post-meta {
+	margin: 0 0 5px;
+	color: #999;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+.post-meta a {
+	color: #999;
+	text-decoration: none;
+}
+.post-meta .separator {
+	color: #eee;
+}
+
+/* List post */
+.shortcode.list-post {
+	max-width: 100%;
+	margin: 0 auto;
+}
+.shortcode.list-post .post-image, .shortcode.list-post .post-station {
+	float: left;
+	margin-right: 7%;
+}
+.shortcode.list-post .post-social {
+	float: right;
+	margin-top: 1%;	
+}
+.single-post .post img {
+	border-radius: 10px;
+}
+
+.twitter {
+	background-image: url('/assets/twitter.png');
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+}
+
+.facebook {
+	background-image: url('/assets/facebook.png');
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+}
+
 /************************************************************************************
 CLEAR & ALIGNMENT
 *************************************************************************************/
@@ -307,3 +439,28 @@ CLEAR & ALIGNMENT
 /* clearfix for ie7 */
 .clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, #content
 { display: block; zoom: 1; }
+
+/************************************************************************************
+SKROLLABLE
+*************************************************************************************/
+.skrollable:not(.progress-bar-bg) {
+	position:relative !important;
+}
+
+/* parallax scrolling */
+html.skrollr-mobile,
+.skrollr-mobile body {
+	height: auto;
+	min-height: 100%;
+}
+
+/* fake scroll */
+.skrollr-mobile #skrollr-body {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+/* fix blank white page mobile */
+.skrollr-mobile #skrollr-body #pagewrap > * {
+	-webkit-transform:translate3d(0,0,0);
+}

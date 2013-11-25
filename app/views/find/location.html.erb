@@ -1,51 +1,32 @@
-		<div id="body" class="clearfix">
-			<!-- layout-container -->
-			<div id="layout" class="pagewidth clearfix">
-				<!-- content -->
-				<div id="content" class="clearfix">
-					<p style="text-align: center;">
-						<big>Stations In Your Area</big>
-					</p>
-					<!-- loops-wrapper -->
-					<div id="loops-wrapper" class="loops-wrapper">
-						<section id="discover-new-flat-theme" class="post-35 section type-section status-publish hentry clearfix section-post">
-						<div class="section-inner">
-							<h1 style="text-align:center;">Would you like to find stations using your location?</h1>
-							<div class="section-content clearfix">
-								<p style="text-align: center;">
-									<big>This will show you stations you are more likely to pick up.</big>
-								</p>
-								<p style="text-align: center;">
-									<a class="shortcode button large rounded green flat" id='get-user-location' href="#get-user-location">Get my location</a>
-								</p>
-							</div>
-							<!-- /.section-content -->
-							<h1 style="text-align:center;">Or...</h1>
-							<div class="section-content clearfix">
-								<p style="text-align: center;">
-									<big>Enter your local zip.</big>
-								</p>
-								<p style="text-align: center;">
-									<input id='zip-code'> <br />
-									<a class="shortcode button large rounded green flat" id='submit' href="#submit">Submit</a>
-								</p>
-								<p style="text-align: center;">
-									<big id="your-location"></big>
-								</p>
-								<p id="location-next-step" style="text-align: center;">
-									<%= link_to 'See Radio Stations', find_index_path, class:'shortcode button large rounded green flat' %>
-								</p>
-							</div>
-							<!-- /.section-content -->
-						</div>
-						<!-- /.section-inner -->
-						</section>
-						<!-- /.section-post -->
-					</div>
-					<!-- /loops-wrapper -->
-				</div>
-				<!-- /content -->
-			</div>
-			<!-- /layout-container -->
-		</div>
-		<!-- /body -->
+<div class="section-outer">
+	<h4 class="textcenter">Stations In Your Area</h4>
+</div>
+<!-- /.section-outer -->
+
+<div class="section-inner">
+	<h1 class="textcenter">Would you like to find stations using your location?</h1>
+	<h4 class="textcenter">This will show you stations you are more likely to pick up.</h4>
+	<br />
+	<p class="textcenter">
+		<a id="get-user-location" class="shortcode button large rounded green flat" href="#get-user-location">Get my location</a>
+	</p>
+
+	<h1 class="textcenter">Or...</h1>
+	<h4 class="textcenter">Enter your local zip.</h4>
+	<br />
+	<p class="textcenter">
+		<input id="zip-code"><br />
+		<a id="submit" class="shortcode button large rounded green flat" href="#submit">Submit</a>
+	</p>
+
+	<div id="location-next-step">
+		<h1 class="textcenter">Got It!</h1>
+		<h4 id="your-location" class="textcenter"></h4>
+		<br />
+		<p class="textcenter">
+			<%= link_to 'See Radio Stations', find_index_path, class:'shortcode button large rounded green flat' %>
+		</p>
+	</div>
+	<!-- /#location-next-step -->
+</div>
+<!-- /.section-inner -->
