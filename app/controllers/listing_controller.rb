@@ -28,4 +28,10 @@ class ListingController < ApplicationController
       format.json { render json: @radio_stations }
     end
   end
+
+  private
+  
+    def app_params
+      params.require(:list).permit(:band, :call_letters, :city, :frequency, :genre, :latitude, :longitude, :name, :phone, :state, :streaming_url)
+    end
 end

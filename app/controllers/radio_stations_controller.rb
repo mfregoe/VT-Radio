@@ -42,4 +42,8 @@ class RadioStationsController < ApplicationController
     def filter_by_city
       " AND city = '#{params[:city]}'"
     end
+
+    def app_params
+      params.require(:list).permit(:band, :call_letters, :city, :frequency, :genre, :latitude, :longitude, :name, :phone, :state, :streaming_url)
+    end
 end
