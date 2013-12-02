@@ -171,7 +171,6 @@ HEADER
 #header {
 	text-align: center;
 	padding: 0;
-	overflow: inherit;
 }
 
 /*
@@ -287,7 +286,7 @@ FOOTER
 }
 
 .back-top-arrow {
-	background-image: url(image_path('back-top.png'));
+	background-image: url('./back-top.png');
 	display: inline-block;
 	height: 18px;
 	width: 30px;
@@ -303,7 +302,6 @@ POST
 /* post content */
 .post-content {
 	min-width: 140px;
-	overflow: hidden;
 }
 
 /* post title */
@@ -391,14 +389,14 @@ POST
 }
 
 .twitter {
-	background-image: url(image_path('twitter.png'));
+	background-image: url('./twitter.png');
 	display: inline-block;
 	height: 32px;
 	width: 32px;
 }
 
 .facebook {
-	background-image: url(image_path('facebook.png'));
+	background-image: url('./facebook.png');
 	display: inline-block;
 	height: 32px;
 	width: 32px;
