@@ -224,6 +224,7 @@ a.shortcode.button {
 	border: none;
 	display: inline-block;
 	text-decoration: none !important;
+	margin: 0 3px 5px 0;
 }
 
 a.shortcode.button:hover {
@@ -480,6 +481,8 @@ MEDIA QUERIES
 	.sidebar-none.list-post .section-inner {
 		max-width: 94%;
 	}
+
+
 	
 	/************************************************************************************
 	HEADER
@@ -523,7 +526,7 @@ MEDIA QUERIES
 	}
 
 	a.shortcode.button.large {
-		font-size: 1.5em !important;
+		font-size: 1.2em !important;
 	}
 	
 	.shortcode.list-post .post {
@@ -543,13 +546,6 @@ MEDIA QUERIES
 	.sidebar-none .post .post-content {
 		text-align: center;
 		margin: 0 !important;
-	}
-
-	/*
-	SECTION 
-	================================================ */
-	.section-inner {
-		padding-top: 80px; /* padding space for fixed header */
 	}
 
 }
