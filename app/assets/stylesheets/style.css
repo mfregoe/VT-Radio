@@ -24,7 +24,6 @@ body {
 	font: 1em/1.7em Helvetica, Arial, sans-serif;
 	color: #888;
 	word-wrap: break-word;
-	overflow-x: hidden;
 	background: #fff;
 }
 a {
@@ -288,7 +287,7 @@ FOOTER
 }
 
 .back-top-arrow {
-	background-image: url('/assets/back-top.png');
+	background-image: url(image_path('back-top.png'));
 	display: inline-block;
 	height: 18px;
 	width: 30px;
@@ -392,14 +391,14 @@ POST
 }
 
 .twitter {
-	background-image: url('/assets/twitter.png');
+	background-image: url(image_path('twitter.png'));
 	display: inline-block;
 	height: 32px;
 	width: 32px;
 }
 
 .facebook {
-	background-image: url('/assets/facebook.png');
+	background-image: url(image_path('facebook.png'));
 	display: inline-block;
 	height: 32px;
 	width: 32px;
