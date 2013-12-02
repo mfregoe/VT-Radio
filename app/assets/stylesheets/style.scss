@@ -24,6 +24,7 @@ body {
 	font: 1em/1.7em Helvetica, Arial, sans-serif;
 	color: #888;
 	word-wrap: break-word;
+	overflow-x: hidden;
 	background: #fff;
 }
 a {
@@ -171,6 +172,7 @@ HEADER
 #header {
 	text-align: center;
 	padding: 0;
+	overflow: inherit;
 }
 
 /*
