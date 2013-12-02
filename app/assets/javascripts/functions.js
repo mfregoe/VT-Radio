@@ -6,16 +6,6 @@ var ThemeTransition = {};
 /////////////////////////////////////////////
 (function($){
 
-// Test if touch event exists //////////////////////////////
-function is_touch_device() {
-	try {
-		document.createEvent('TouchEvent');
-		return true;
-	} catch(e) {
-		return false;
-	}
-}
-
 // Theme Transition Animation /////////////////////////
 ThemeTransition = {
 	init: function() {
@@ -60,7 +50,7 @@ $(document).ready(function() {
 $(window).load(function() {
 
 	// Transition Effect
-	if ( definedConstants.scrollingEffectOn && typeof skrollr !== 'undefined' ) {
+	if ( definedConstants.scrollingEffectOn && typeof skrollr !== 'undefined' && $( "html" ).hasClass( "skrollr-desktop" ) ) {
 		ThemeTransition.init();
 		s.refresh();
 	}
@@ -68,15 +58,7 @@ $(window).load(function() {
 });
 
 // skrollr initiate
-if ( typeof (skrollr) !== 'undefined' && definedConstants.scrollingEffectOn ) {
-	// initialize skrolr
-	if(is_touch_device()){
-		$('#pagewrap').wrap('<div id="skrollr-body" />'); // iscroll support
-		$('body').addClass('touch-device-body');
-		
-		var $headerwrap = $('#headerwrap'), headerHeight = $headerwrap.height(),
-		$headClone = $headerwrap.clone();
-	}
+if ( typeof (skrollr) !== 'undefined' && definedConstants.scrollingEffectOn && $( "html" ).hasClass( "skrollr-desktop" ) ) {
 	var s = skrollr.init({
 		smoothScrolling : true,
 		easing: {
@@ -86,24 +68,6 @@ if ( typeof (skrollr) !== 'undefined' && definedConstants.scrollingEffectOn ) {
 		  	}
 		},
 		forceHeight : false,
-		render: function(data) {
-			if ( is_touch_device() && definedConstants.fixedHeader != '' ) {
-				headerHeight = $headerwrap.height();
-				if(data.curTop > headerHeight) {
-					if(!$headerwrap.parent().hasClass('touch-device-body')) {
-						$headerwrap.remove();
-						$headClone.prependTo($('body'));
-						$headerwrap.addClass('fixed-header');
-					}
-				} else {
-					if($headerwrap.parent().hasClass('touch-device-body')) {
-						$headerwrap.remove();
-						$headClone.prependTo($('#pagewrap'));
-						$headerwrap.removeClass('fixed-header');
-					}
-				}
-			}
-		}
 	});
 }
 	
