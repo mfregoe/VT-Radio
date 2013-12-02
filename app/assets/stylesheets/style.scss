@@ -286,7 +286,7 @@ FOOTER
 }
 
 .back-top-arrow {
-	background-image: url('./back-top.png');
+	background-image: url(image_path('back-top.png'));
 	display: inline-block;
 	height: 18px;
 	width: 30px;
@@ -389,14 +389,14 @@ POST
 }
 
 .twitter {
-	background-image: url('./twitter.png');
+	background-image: url(image_path('twitter.png'));
 	display: inline-block;
 	height: 32px;
 	width: 32px;
 }
 
 .facebook {
-	background-image: url('./facebook.png');
+	background-image: url(image_path('facebook.png'));
 	display: inline-block;
 	height: 32px;
 	width: 32px;
