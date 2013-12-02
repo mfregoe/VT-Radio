@@ -220,15 +220,19 @@ a.shortcode.button {
 	text-transform: uppercase;
 	background-color: #f06544;
 	border: none;
+	display: inline-block;
+	text-decoration: none !important;
 }
 
 a.shortcode.button:hover {
+	text-decoration: none;
 	background-color: #FF7F5E;
 }
 
 a.shortcode.button.flat {
 	box-shadow: none;
 	text-shadow: none;
+	background: #f5f5f5;
 }
 
 a.shortcode.button.green {
@@ -460,4 +464,139 @@ html.skrollr-mobile,
 /* fix blank white page mobile */
 .skrollr-mobile #skrollr-body #pagewrap > * {
 	-webkit-transform:translate3d(0,0,0);
+}
+
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+@media screen and (max-width: 1100px) {
+
+	/************************************************************************************
+	STRUCTURE
+	*************************************************************************************/
+	.sidebar-none.list-post .section-inner {
+		max-width: 94%;
+	}
+	
+	/************************************************************************************
+	HEADER
+	*************************************************************************************/
+	/* reset absolute elements to static */
+	#site-logo, 
+	#site-description  {
+		position: static !important;
+		float: none;
+		clear: both;
+	}
+	#headerwrap {
+		position: relative;
+		z-index: 998;
+	}
+
+
+	/************************************************************************************
+	CONTENT
+	*************************************************************************************/
+	/* section title */
+	.section-title {
+		font-size: 4em;
+	}
+
+	body.list-post .post-image,
+	.shortcode.list-post .post.odd .post-image,
+	.shortcode.list-post .post.odd .post-image {
+		 width: 145px;
+		 float: none;
+		 margin: 0px auto !important;
+		 text-align: center;
+	}
+
+	#site-logo {
+		font-size: 3.5em !important;
+	}
+
+	h1 {
+		font-size: 2em !important;
+	}
+
+	a.shortcode.button.large {
+		font-size: 1.5em !important;
+	}
+	
+	.shortcode.list-post .post {
+		text-align: center;
+	}
+
+	.shortcode.list-post .post-image, .shortcode.list-post .post-station {
+		float: none !important;
+		margin: 5px auto !important;
+	}
+
+	.shortcode.list-post .post-social {
+		float: none !important;
+		text-align: center;
+	}
+
+	.sidebar-none .post .post-content {
+		text-align: center;
+		margin: 0 !important;
+	}
+
+	/*
+	SECTION 
+	================================================ */
+	.section-inner {
+		padding-top: 80px; /* padding space for fixed header */
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+
+}
+
+@media screen and (max-width: 760px) and (max-height: 600px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+	/************************************************************************************
+	HEADER
+	*************************************************************************************/
+	#headerwrap {
+		z-index: 998;
+		position: relative;
+	}
+
+	/* social widget */
+	.social-widget {
+		position: static;
+		float: none;
+	}
+
+	/************************************************************************************
+	POST
+	*************************************************************************************/
+	/* post */
+	.post {
+		width: auto !important;
+		max-width: 100% !important;
+		margin-left: 0 !important;
+		float: none !important;
+	}
+
+}
+
+@media screen and (max-width: 340px) {
+
+}
+
+@media screen and (min-width: 781px) {
+
 }
