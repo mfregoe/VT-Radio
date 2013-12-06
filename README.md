@@ -4,8 +4,7 @@
 
 <ul>
 	<li>-- JS needs to be changed to accomodate empty proximity response.</li>
-	<li>-- More user prompts for location services should be added.</li>
-	<li>-- Text needs to be shortened / rewritten.</li>
+	<li>-- Contribute Link (Github Issue Page).</li>
 	<li>-- Clean-up of data.</li>
 </ul>
 

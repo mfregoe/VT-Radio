@@ -154,6 +154,14 @@ STRUCTURE
 	margin-bottom: 10px;
 }
 
+#location-error {
+	display: none;
+}
+
+#location-waiting {
+	display: none;
+}
+
 #location-next-step {
 	display: none;
 }

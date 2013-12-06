@@ -4,8 +4,8 @@
 <!-- /.section-outer -->
 
 <div class="section-inner">
-	<h1 class="textcenter">Would you like to find stations using your location?</h1>
-	<h4 class="textcenter">This will show you stations you are more likely to pick up.</h4>
+	<h1 class="textcenter">Location Based Listings</h1>
+	<h4 class="textcenter">Stations you are more likely to pick up.</h4>
 	<br />
 	<p class="textcenter">
 		<a id="get-user-location" class="shortcode button large rounded green flat" href="#get-user-location">Get my location</a>
@@ -19,12 +19,22 @@
 		<a id="submit" class="shortcode button large rounded green flat" href="#submit">Submit</a>
 	</p>
 
+	<div id="location-error">
+		<h1 class="textcenter">There Was An Error</h1>
+		<h4 id="response-error" class="textcenter"></h4>
+	</div>
+
+	<div id="location-waiting">
+		<h1 class="textcenter">Please Wait</h1>
+		<h4 class="textcenter">Getting location...</h4>
+	</div>
+
 	<div id="location-next-step">
-		<h1 class="textcenter">Got It!</h1>
+		<h1 id="response-title" class="textcenter"></h1>
 		<h4 id="your-location" class="textcenter"></h4>
 		<br />
 		<p class="textcenter">
-			<%= link_to 'See Radio Stations', find_index_path, class:'shortcode button large rounded green flat' %>
+			<%= link_to 'See Stations', find_index_path, class:'shortcode button large rounded green flat' %>
 		</p>
 	</div>
 	<!-- /#location-next-step -->
