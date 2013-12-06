@@ -287,6 +287,11 @@ FOOTER
 	text-decoration: none;
 }
 
+.back-top {
+	clear: left;
+	font-size: 14px !important;
+}
+
 .back-top a {
 	background: rgb(130,187,67);
 	border-radius: 100%;
@@ -334,7 +339,7 @@ POST
 }
 
 /* post date */
-.post-date {
+.post-date, .back-top {
 	display: block;
 	font-family: 'Josefin Sans', sans-serif;
 	color: #999;
@@ -527,6 +532,7 @@ MEDIA QUERIES
 
 	#site-logo {
 		font-size: 3.5em !important;
+		padding: 10px 0 10px !important;
 	}
 
 	h1 {
@@ -575,10 +581,6 @@ MEDIA QUERIES
 	/************************************************************************************
 	HEADER
 	*************************************************************************************/
-	#headerwrap {
-		z-index: 998;
-		position: relative;
-	}
 
 	/* social widget */
 	.social-widget {
