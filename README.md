@@ -3,8 +3,6 @@
 <h2>This file will be used to list issues and to-do items:</h2>
 
 <ul>
-	<li>-- JS needs to be changed to accomodate empty proximity response.</li>
-	<li>-- Contribute Link (Github Issue Page).</li>
 	<li>-- Clean-up of data.</li>
 </ul>
 

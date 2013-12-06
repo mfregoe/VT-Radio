@@ -8,11 +8,11 @@ $(document).ready(function() {
     // fetch json data
     $.getJSON(window.location.pathname, function(data) {
       if(data.length === 0) {
-        $('#data-container').html('<div style="text-align: center;">No results found within your radius</div>');
+        $('#data-container').html('<div style="text-align: center;">No results found within your radius.</div>');
       }
       else {
         collection = data;
-        
+
         //Distance Matrix can only handle 25 destinations per request
         if(collection.length >= 75) {
           getDestinations(collection);
@@ -86,7 +86,7 @@ $(document).ready(function() {
         avoidTolls: false
       }, function(data, status) {
         if (status == google.maps.DistanceMatrixStatus.OK) {
-          convertMetersToMiles(data.rows[0].elements);
+          convertMetersToMilesPassOne(data.rows[0].elements);
         } else {
           $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
         }
@@ -107,14 +107,14 @@ $(document).ready(function() {
         avoidTolls: false
       }, function(data, status) {
         if (status == google.maps.DistanceMatrixStatus.OK) {
-          convertMetersToMiles(data.rows[0].elements);
+          convertMetersToMilesPassOne(data.rows[0].elements);
         } else {
           $('#data-container').html('<div style="text-align: center;">There was an error processing locations.</div>');
         }
       });
     }
     else {
-      renderCollection();
+      renderCollectionPassOne();
     }
   }
 
@@ -268,6 +268,13 @@ $(document).ready(function() {
     }
   }
 
+  function convertMetersToMilesPassOne(arr) {
+    _.each(arr, function(item, index) {
+      filterCollection(parseInt(item.distance.value * 0.00062, 10), index);
+    });
+    renderCollectionPassOne();
+  }
+
   function convertMetersToMiles(arr) {
     _.each(arr, function(item, index) {
       filterCollection(parseInt(item.distance.value * 0.00062, 10), index);
@@ -286,6 +293,7 @@ $(document).ready(function() {
       if(distance <= 60) {
         collection[itemIndex].distance = distance;
         collection[itemIndex].show = true;
+        collection.show = true;
       }
       else {
         collection[itemIndex].distance = distance;
@@ -296,6 +304,7 @@ $(document).ready(function() {
       if(distance <= 35) {
         collection[itemIndex].distance = distance;
         collection[itemIndex].show = true;
+        collection.show = true;
       }
       else {
         collection[itemIndex].distance = distance;
@@ -305,6 +314,26 @@ $(document).ready(function() {
   }
 
   // render the data collection in UI
+  function renderCollectionPassOne() {
+    var count = 0;
+    if ( collection.show != true ) {
+      $('#data-container').html('<div style="text-align: center;">No results found within your radius.</div>');
+    }
+    _.each(collection, function(item) {
+      if(item.show) {
+        count++;
+        var html = '<div class="post clearfix"><div class="post-image">';
+        html += item.frequency + '</div><div class="post-station"><h1 class="post-title">';
+        html += item.call_letters + ' - ' + item.name + '</h1><p class="post-meta">';
+        html += item.band + ' - ' + item.city + ', ' + item.state + '</p><p>';
+        html += 'Phone: ' + item.phone + '<br/>Genres: ' + item.genre + '</p></div><div class="post-social"><p class="post-meta">Share It:</p><a href="http://twitter.com/home?status='+ document.URL + '" title="Click to share this on Twitter" target="_blank"><span class="social-link-item twitter" style="margin-right:5px"></span></a><a href="https://www.facebook.com/sharer/sharer.php?u='+ document.URL + '" target="_blank" title="Click to share this on Facebook"><span class="social-link-item facebook"></span></a></div></div>';
+        $('#data-container').append(html);
+      }
+    });
+  
+    window.getComputedStyle($('#data-container'));
+  }
+
   function renderCollection() {
     var count = 0;
     _.each(collection, function(item) {

@@ -50,7 +50,7 @@ $(document).ready(function() {
 $(window).load(function() {
 
 	// Transition Effect
-	if ( definedConstants.scrollingEffectOn && typeof skrollr !== 'undefined' && $( "html" ).hasClass( "skrollr-desktop" ) ) {
+	if ( definedConstants.scrollingEffectOn && typeof skrollr !== 'undefined' ) {
 		ThemeTransition.init();
 		s.refresh();
 	}
@@ -58,7 +58,7 @@ $(window).load(function() {
 });
 
 // skrollr initiate
-if ( typeof (skrollr) !== 'undefined' && definedConstants.scrollingEffectOn && $( "html" ).hasClass( "skrollr-desktop" ) ) {
+if ( typeof (skrollr) !== 'undefined' && definedConstants.scrollingEffectOn && screen.width >= 1100 ) {
 	var s = skrollr.init({
 		smoothScrolling : true,
 		easing: {
