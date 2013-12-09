@@ -36,11 +36,11 @@ a {
     -ms-transition: 0.3s;
     transition: 0.3s;
 }
-a:hover {
+a:hover, a:focus {
 	color: #0cc;
 	text-decoration: none;
 }
-a img:hover {
+a img:hover, a img:focus {
 	opacity: .5;
 	-webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -123,7 +123,7 @@ input[type=reset], input[type=submit], button {
 
 
 /* form input:hover */
-input[type=reset]:hover, input[type=submit]:hover, button:hover {
+input[type=reset]:hover, input[type=submit]:hover, button:hover, input[type=reset]:focus, input[type=submit]:focus, button:focus {
 	background: #FF7F5E;
 	color: #fff;
 }
@@ -199,7 +199,7 @@ SITE LOGO
 	color: #fff;
 	text-decoration: none;
 }
-#site-logo a:hover {
+#site-logo a:hover, #site-logo a:focus {
 	text-decoration: none;
 }
 
@@ -235,7 +235,7 @@ a.shortcode.button {
 	margin: 0 3px 5px 0;
 }
 
-a.shortcode.button:hover {
+a.shortcode.button:hover, a.shortcode.button:focus {
 	text-decoration: none;
 	background-color: #FF7F5E;
 }
@@ -249,7 +249,7 @@ a.shortcode.button.flat {
 a.shortcode.button.green {
 	background-color: rgb(128,200,112) !important;
 }
-a.shortcode.button.green:hover {
+a.shortcode.button.green:hover, a.shortcode.button.green:focus {
 	background-color: rgb(181,225,149) !important;
 }
 
@@ -301,7 +301,7 @@ FOOTER
 	padding: 20px 0 0;
 	margin: 0 auto 5%;
 }
-.back-top a:hover {
+.back-top a:hover, .back-top a:focus {
 	background: #fc0;
 }
 
@@ -334,7 +334,7 @@ POST
 	color: #000;
 	text-decoration: none;
 }
-.post-title a:hover {
+.post-title a:hover, .post-title a:focus {
 	color: #999;
 }
 

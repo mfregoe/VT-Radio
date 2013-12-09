@@ -1,15 +1,15 @@
-<div class="section-inner">
+<div class="section-inner" role="main">
 	<h1 class="textcenter">Location Based Listings</h1>
 	<h4 class="textcenter">Stations you are more likely to pick up.</h4>
 	<br />
-	<p class="textcenter">
+	<p class="textcenter" role="navigation">
 		<a id="get-user-location" class="shortcode button large rounded green flat" href="#get-user-location">Get my location</a>
 	</p>
 
 	<h1 class="textcenter">Or...</h1>
 	<h4 class="textcenter">Enter your local zip.</h4>
 	<br />
-	<p class="textcenter">
+	<p class="textcenter" role="form">
 		<input id="zip-code"><br />
 		<a id="submit" class="shortcode button large rounded green flat" href="#submit">Submit</a>
 	</p>
@@ -28,7 +28,7 @@
 		<h1 id="response-title" class="textcenter"></h1>
 		<h4 id="your-location" class="textcenter"></h4>
 		<br />
-		<p class="textcenter">
+		<p class="textcenter" role="navigation">
 			<%= link_to 'See Stations', find_index_path, class:'shortcode button large rounded green flat' %>
 		</p>
 	</div>

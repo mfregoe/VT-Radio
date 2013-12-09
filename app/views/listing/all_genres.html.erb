@@ -3,11 +3,11 @@
 </div>
 <!-- /.section-outer -->
 
-<div class="section-inner">
+<div class="section-inner" role="main">
 	<h1 class="textcenter">Available Genres:</h1>
 	<h4 class="textcenter">Select one to see related stations.</h4>
 	<br />
-	<p class="textcenter">
+	<p class="textcenter" role="navigation">
 		<% @all_genres.each do |genre| %>
 		    <a class="shortcode button large rounded green flat" href="/listing/genres/<%= genre %>"><%= genre %></a>
 		<% end %>

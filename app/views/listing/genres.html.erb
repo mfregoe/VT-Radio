@@ -5,22 +5,22 @@
 </div>
 <!-- /.section-outer -->
 
-<div class="section-inner">
+<div class="section-inner" role="main">
   <div class="shortcode clearfix list-post circle-image">
   <% @radio_stations.each do |radio_station| %>
-    <div class="post clearfix">
+    <div class="post clearfix" itemscope itemtype="http://schema.org/RadioStation">
       <div class="post-image">
-        <%= radio_station.frequency %>
+        <span itemprop="alternateName"><%= radio_station.frequency %></span>
       </div>
       <div class="post-station">
         <h1 class="post-title">
-          <%= radio_station.call_letters %> - <%= radio_station.name %>
+          <%= radio_station.call_letters %> - <span itemprop="name"><%= radio_station.name %></span>
         </h1>
-        <p class="post-meta">
-          <%= radio_station.band %> - <%= radio_station.city %>, <%= radio_station.state %>
+        <p class="post-meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <%= radio_station.band %> - <span itemprop="addressLocality"><%= radio_station.city %></span>, <span itemprop="addressRegion"><%= radio_station.state %></span>
         </p>
         <p>
-          Phone: <%= radio_station.phone %><br />
+          Phone: <span itemprop="telephone"><%= radio_station.phone %></span><br />
           Genres: <%= radio_station.genre %>
         </p>
       </div>

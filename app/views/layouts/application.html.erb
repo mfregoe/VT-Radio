@@ -9,8 +9,11 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 </head>
 <body class="sidebar-none">
+	<noscript>
+		<style scoped type="text/css"> .no-js { display: none; } </style>
+	</noscript>
 	<div id="headerwrap">
-		<header id="header">
+		<header id="header" role="banner">
 			<h1 id="site-logo"><a href="/" title="VT Radio">VT Radio</a></h1>
 			<h2 id="site-description">Vermont's Open Radio Directory.</h2>
 		</header>
@@ -21,7 +24,7 @@
 	<%= yield %>
 
 	<div id="footerwrap">
-		<footer id="footer" class="pagewidth clearfix">
+		<footer id="footer" class="pagewidth clearfix" role="contentinfo">
 			<p class="back-top">
 				Back to top:
 				<a href="#header" title="Back to Top"><span class="back-top-arrow"></span></a>

@@ -1,15 +1,15 @@
-<div class="section-inner">
+<div class="section-inner" role="main">
 	<h1 class="textcenter">Filter By Genre?</h1>
 	<h4 class="textcenter">See only what you like to hear.</h4>
 	<br />
-	<p class="textcenter">
+	<p class="textcenter" role="navigation">
 		<%= link_to 'Filter by Genre', all_genres_listing_index_path, class:'shortcode button large rounded green flat' %>
 	</p>
 
 	<h1 class="textcenter">Or...</h1>
 	<h4 class="textcenter">See a full list of stations.</h4>
 	<br />
-	<p class="textcenter">
+	<p class="textcenter" role="navigation">
 		<%= link_to 'AM', '/listing/bands/am', class:'shortcode button large rounded green flat' %>
 		<%= link_to 'FM', '/listing/bands/fm', class:'shortcode button large rounded green flat' %>
 	</p>
