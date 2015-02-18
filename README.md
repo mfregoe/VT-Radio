@@ -1,8 +1,8 @@
-#VTRadio.org Source Home
+For HackVT 2013, my friend Greg and I made this radio station locator for Vermont.
 
-##To-do items:
+The site utilizes the Google Distance Matrix API and Google Geocode API.
 
-1. Clean-up of data.</li>
+Built with Ruby/Rails and mobile/responsive ready.
 
-##Project Home:
-###<http://vtradio.org>
+See it in action:
+http://vtradio.herokuapp.com/
